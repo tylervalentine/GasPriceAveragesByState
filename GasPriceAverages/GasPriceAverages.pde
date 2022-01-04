@@ -1,5 +1,5 @@
 PImage mapImage;
-Table locationTable;
+Table locationTable, currentPriceTable;
 int rowCount;
 
 void setup()
@@ -7,6 +7,7 @@ void setup()
   size(640, 400);
   mapImage = loadImage("map.png");
   locationTable = new Table("locations.tsv");
+  currentPriceTable = new Table("stategaspricesaverage.tsv");
   rowCount = locationTable.getRowCount();
 }
 
@@ -28,7 +29,7 @@ void draw()
     if(dist(x, y, mouseX, mouseY) <= 9)
     {
       ellipse(x, y, 18, 18);
-      text(locationTable.getString(row, 0), x+10, y-10);
+      text(currentPriceTable.getString(row, 0), x+10, y-10);
     }
   }
 }
