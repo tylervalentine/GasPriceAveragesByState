@@ -33,7 +33,10 @@ void draw()
     if(dist(x, y, mouseX, mouseY) <= 9)
     {
       ellipse(x, y, 18, 18);
-      text(currentPriceTable.getString(row, 0), x+10, y-10);
+      fill(0, 0, 0);
+      textSize(30);
+      text(currentPriceTable.getString(row, 0) + ": $" + currentPriceTable.getString(row, 1), 250, 30);
     }
+    fill(192, 0, 0);
   }
 }
