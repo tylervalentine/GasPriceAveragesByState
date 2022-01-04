@@ -4,6 +4,9 @@ int rowCount;
 
 void setup()
 {
+  surface.setTitle("Gas Prices By State");
+  surface.setResizable(true);
+  surface.setLocation(100, 100);
   size(640, 400);
   mapImage = loadImage("map.png");
   locationTable = new Table("locations.tsv");
@@ -13,6 +16,7 @@ void setup()
 
 void draw()
 {
+  
   background(255);
   image(mapImage, 0, 0);
   
