@@ -21,6 +21,8 @@ void draw()
   
   for(int row = 0; row < rowCount; row++)
   {
-    float x = locationTable
+    float x = locationTable.getFloat(row, 1);
+    float y = locationTable.getFloat(row, 2);
+    ellipse(x, y, 9, 9);
   }
 }
