@@ -38,6 +38,10 @@ class Table {
     return rowCount;
   }
   
+  int getColumnCount() {
+    return rowCount;
+  }
+  
   
   // find a row by its name, returns -1 if no row found
   int getRowIndex(String name) {
