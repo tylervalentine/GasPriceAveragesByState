@@ -38,8 +38,8 @@ class Table {
     return rowCount;
   }
   
-  int getColumnCount() {
-    return rowCount;
+  int getColumnCount(int row) {
+    return data[row].length;
   }
   
   

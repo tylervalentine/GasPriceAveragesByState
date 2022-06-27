@@ -33,7 +33,6 @@ void draw()
 {
   background(255);
   image(mapImage, 0, 0);
-  
   smooth();
   fill(192, 0, 0);
   noStroke();
