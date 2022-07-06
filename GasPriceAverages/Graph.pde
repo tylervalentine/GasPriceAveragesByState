@@ -22,7 +22,6 @@ public class Graph extends PApplet {
     for(int row = 0; row < rowCount; row++) {
       if(name.strip().equals(gasPriceTable.getString(row, 0).strip()))
       {
-        println(gasPriceTable.getColumnCount(row));
         if(gasPriceTable.getColumnCount(row) >= 3)
           points.add(gasPriceTable.getFloat(row, 1), gasPriceTable.getFloat(row, 2));
         if(gasPriceTable.getColumnCount(row) >= 5)
@@ -37,22 +36,13 @@ public class Graph extends PApplet {
           points.add(gasPriceTable.getFloat(row, 11), gasPriceTable.getFloat(row, 12));
       }    
     }
-    
-    // Create a new plot and set its position on the screen
+   
     GPlot plot = new GPlot(this);
     plot.setPos(25, 25);
-    // or all in one go
-    // GPlot plot = new GPlot(this, 25, 25);
-  
-    // Set the plot title and the axis labels
     plot.setTitleText("Gas Prices for " + name);
     plot.getXAxis().setAxisLabelText("Year");
-    plot.getYAxis().setAxisLabelText("Price");
-  
-    // Add the points
+    plot.getYAxis().setAxisLabelText("Price ($)");
     plot.setPoints(points);
-  
-    // Draw it!
     plot.defaultDraw();
   }
   

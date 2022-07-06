@@ -1,4 +1,4 @@
-import processing.serial.*; //<>//
+import processing.serial.*;
 import g4p_controls.*;
 
 GButton btnMakeWindow;
@@ -40,6 +40,6 @@ void draw()
 
 void handleButtonEvents(GButton button, GEvent event) {
   if (buttons.keySet().contains(button) && event == GEvent.CLICKED) {
-    window = new Graph(buttons.get(button));
-  }// if
+    window = new Graph(buttons.get(button)); //<>//
+  }
 }
